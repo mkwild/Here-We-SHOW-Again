@@ -43,7 +43,6 @@ for (let counter2 = 1; counter2 <= 20; counter2++) {
   }
 }
 
-
 /** KATA 03 ⮕
 ***
 *** Log the odd numbers from 1 to 20. (1, 3, 5,...,17,19)
@@ -64,7 +63,6 @@ for (let counter3 = 1; counter3 <=20; counter3++) {
     listElement.append(counter3)
   }
 }
-
 
 /** KATA 04 ⮕
 ***
@@ -87,7 +85,6 @@ for (let counter4 = 1; counter4 <= 100; counter4++) {
   }
 }
 
-
 /** KATA 05 ⮕
 ***
 *** Log all numbers up to 100 that are perfect squares. (1, 4, 9, ..., 81, 100)
@@ -109,7 +106,6 @@ for (let counter5 = 1; counter5 <= 100; counter5++) {
   }
 }
 
-
 /** KATA 06 ⮕
 ***
 *** Log the numbers counting backwards from 20 to 1. (20, 19, 18, ..., 2, 1)
@@ -128,7 +124,6 @@ for (let counter6 = 20; counter6 > 0; counter6--) {
   section6List.append(listElement)
   listElement.append(counter6)
 }
-
 
 /** KATA 07 ⮕
 ***
@@ -151,7 +146,6 @@ for (let counter7 = 20; counter7 > 0; counter7--) {
   }
 }
 
-
 /** KATA 08 ⮕
 ***
 *** Log the odd numbers from 20 to 1, counting backwards. (19, 17, 15, ..., 3, 1)
@@ -173,7 +167,6 @@ for (let counter8 = 20; counter8 > 0; counter8--) {
   }
 }
 
-
 /** KATA 09 ⮕
 ***
 *** Log the multiples of 5, counting down from 100. (100, 95, 90, ..., 10, 5)
@@ -194,7 +187,6 @@ for (let counter9 = 100; counter9 > 0; counter9--) {
     listElement.append(counter9)
   }
 }
-
 
 /** KATA 10 ⮕
 ***
@@ -321,7 +313,6 @@ const listElement15 = document.createElement("li")
 section15List.append(listElement15)
 listElement15.append(sum15)
 
-
 /** KATA 16 ⮕
 ***
 *** Display the sum of all the elements in sampleArray.
@@ -394,27 +385,111 @@ listElement18.append(largest)
 *** Display 20 solid gray rectangles, each 20px high and 100px wide.
 ***
 ***/
+const kata19Heading = document.createElement("h2")
+kata19Heading.id = "h19"
+mainElement.append(kata19Heading)
+kata19Heading.append("Kata 19")
+
+for (let counter19 = 0; counter19 < 20; counter19++) {
+    const block = document.createElement("div")
+    block.style.backgroundColor = "gray"
+    block.style.width = "100px"
+    block.style.height = "20px"
+    block.style.margin = "5px"
+    kata19Heading.append(block)
+}
 
 /** KATA 20 ⮕
 ***
 *** Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
 ***
 ***/
+const kata20Heading = document.createElement("h2")
+kata20Heading.id = "h20"
+mainElement.append(kata20Heading)
+kata20Heading.append("Kata 20")
+
+for (let counter20 = 5; counter20 <= 100; counter20 += 5) {
+    let width = 100 + counter20
+    const block = document.createElement("div")
+    block.style.backgroundColor = "gray"
+    block.style.width = `${width}px`
+    block.style.height = "20px"
+    block.style.margin = "5px"
+    kata20Heading.append(block)
+}
 
 /** KATA 21 ⮕
 ***
 *** Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
 ***
 ***/
+const kata21Heading = document.createElement("h2")
+kata21Heading.id = "h21"
+mainElement.append(kata21Heading)
+kata21Heading.append("Kata 21")
+
+for (let counter21 = 0; counter21 < sampleArray.length; counter21++) {
+    let width = sampleArray[counter21]
+    const block = document.createElement("div")
+    block.style.backgroundColor = "gray"
+    block.style.width = `${width}px`
+    block.style.height = "20px"
+    block.style.margin = "5px"
+    kata21Heading.append(block)
+}
 
 /** KATA 22 ⮕
 ***
 *** As in #21, but alternate colors so that every other rectangle is red.
 ***
 ***/
+const kata22Heading = document.createElement("h2")
+kata22Heading.id = "h22"
+mainElement.append(kata22Heading)
+kata22Heading.append("Kata 22")
+
+let color22 = "gray"
+for (let counter22 = 0; counter22 < sampleArray.length; counter22++) {
+    let width = sampleArray[counter22]
+    const block = document.createElement("div")
+    if (color22 == "gray") {
+        block.style.backgroundColor = `${color22}`
+        color22 = "red"
+    }
+    else if (color22 == "red") {
+        block.style.backgroundColor = `${color22}`
+        color22 = "gray"
+    }
+    block.style.width = `${width}px`
+    block.style.height = "20px"
+    block.style.margin = "5px"
+    kata22Heading.append(block)
+}
 
 /** KATA 22 ⮕
 ***
 *** As in #21, but color the rectangles with even widths red.
 ***
 ***/
+const kata23Heading = document.createElement("h2")
+kata23Heading.id = "h23"
+mainElement.append(kata23Heading)
+kata23Heading.append("Kata 23")
+
+for (let counter23 = 0; counter23 < sampleArray.length; counter23++) {
+    let width = sampleArray[counter23]
+    const block = document.createElement("div")
+    if (sampleArray[counter23]%2 == 0) {
+        color23 = "red"
+        block.style.backgroundColor = `${color23}`
+    }
+    else {
+        color23 = "gray"
+        block.style.backgroundColor = `${color23}`
+    }
+    block.style.width = `${width}px`
+    block.style.height = "20px"
+    block.style.margin = "5px"
+    kata23Heading.append(block)
+}
