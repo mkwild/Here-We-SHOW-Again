@@ -303,6 +303,23 @@ for (let counter14 = 0; counter14 < sampleArray.length; counter14++) {
 *** Display the sum of all the numbers from 1 to 20.
 ***
 ***/
+const kata15Heading = document.createElement("h2")
+kata15Heading.id = "h15"
+mainElement.append(kata15Heading)
+kata15Heading.append("Kata 15")
+
+const section15List = document.createElement("ul")
+kata15Heading.append(section15List)
+
+const array15 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+let sum15 = array15.reduce(function(a, b){
+    return a + b
+}, 0)
+
+const listElement15 = document.createElement("li")
+section15List.append(listElement15)
+listElement15.append(sum15)
 
 
 /** KATA 16 ⮕
@@ -310,17 +327,94 @@ for (let counter14 = 0; counter14 < sampleArray.length; counter14++) {
 *** Display the sum of all the elements in sampleArray.
 ***
 ***/
+const kata16Heading = document.createElement("h2")
+kata16Heading.id = "h16"
+mainElement.append(kata16Heading)
+kata16Heading.append("Kata 16")
 
+const section16List = document.createElement("ul")
+kata16Heading.append(section16List)
+
+let sum16 = sampleArray.reduce(function(a, b){
+    return a + b
+}, 0)
+
+const listElement16 = document.createElement("li")
+section16List.append(listElement16)
+listElement16.append(sum16)
 
 /** KATA 17 ⮕
 ***
 *** Display the smallest element in sampleArray.
 ***
 ***/
+const kata17Heading = document.createElement("h2")
+kata17Heading.id = "h17"
+mainElement.append(kata17Heading)
+kata17Heading.append("Kata 17")
 
+const section17List = document.createElement("ul")
+kata17Heading.append(section17List)
+
+let smallest = sampleArray[0]
+for (let counter17 = 1; counter17 < sampleArray.length; counter17++) {
+    if (sampleArray[counter17] < smallest) {
+        smallest = sampleArray[counter17]
+    }
+}
+const listElement17 = document.createElement("li")
+section17List.append(listElement17)
+listElement17.append(smallest)
 
 /** KATA 18 ⮕
 ***
 *** Display the largest element in sampleArray.
+***
+***/
+const kata18Heading = document.createElement("h2")
+kata18Heading.id = "h18"
+mainElement.append(kata18Heading)
+kata18Heading.append("Kata 18")
+
+const section18List = document.createElement("ul")
+kata18Heading.append(section18List)
+
+let largest = sampleArray[0]
+for (let counter18 = 1; counter18 < sampleArray.length; counter18++) {
+    if (sampleArray[counter18] > largest) {
+        largest = sampleArray[counter18]
+    }
+}
+const listElement18 = document.createElement("li")
+section18List.append(listElement18)
+listElement18.append(largest)
+
+/** KATA 19 ⮕
+***
+*** Display 20 solid gray rectangles, each 20px high and 100px wide.
+***
+***/
+
+/** KATA 20 ⮕
+***
+*** Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).
+***
+***/
+
+/** KATA 21 ⮕
+***
+*** Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.
+***
+***/
+
+/** KATA 22 ⮕
+***
+*** As in #21, but alternate colors so that every other rectangle is red.
+***
+***/
+
+/** KATA 22 ⮕
+***
+*** As in #21, but color the rectangles with even widths red.
 ***
 ***/
