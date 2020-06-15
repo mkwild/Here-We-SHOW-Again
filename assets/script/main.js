@@ -217,4 +217,110 @@ for (let counter10 = 100; counter10 > 0; counter10--) {
   }
 }
 
+/** KATA 11 ⮕
+***
+*** Display the 20 elements of sampleArray. (469, 755, 244, …, 940, 472)
+***
+***/
+const kata11Heading = document.createElement("h2")
+kata11Heading.id = "h11"
+mainElement.append(kata11Heading)
+kata11Heading.append("Kata 11")
 
+const section11List = document.createElement("ul")
+kata11Heading.append(section11List)
+
+for (let counter11 = 0; counter11 < sampleArray.length; counter11++) {
+    const listElement = document.createElement("li")
+    section11List.append(listElement)
+    listElement.append(sampleArray[counter11])
+}
+
+/** KATA 12 ⮕
+***
+*** Display all the even numbers contained in sampleArray. (244, 758, 450, …, 940, 472)
+***
+***/
+const kata12Heading = document.createElement("h2")
+kata12Heading.id = "h12"
+mainElement.append(kata12Heading)
+kata12Heading.append("Kata 12")
+
+const section12List = document.createElement("ul")
+kata12Heading.append(section12List)
+
+for (let counter12 = 0; counter12 < sampleArray.length; counter12++) {
+    if (sampleArray[counter12]%2 == 0) {
+        const listElement = document.createElement("li")
+        section12List.append(listElement)
+        listElement.append(sampleArray[counter12])
+    }
+}
+
+/** KATA 13 ⮕
+***
+*** Display all the odd numbers contained in sampleArray. (469, 755, 245, …, 179, 535)
+***
+***/
+const kata13Heading = document.createElement("h2")
+kata13Heading.id = "h13"
+mainElement.append(kata13Heading)
+kata13Heading.append("Kata 13")
+
+const section13List = document.createElement("ul")
+kata13Heading.append(section13List)
+
+for (let counter13 = 0; counter13 < sampleArray.length; counter13++) {
+    if (sampleArray[counter13]%2 == 1) {
+        const listElement = document.createElement("li")
+        section13List.append(listElement)
+        listElement.append(sampleArray[counter13])
+    }
+}
+
+/** KATA 14 ⮕
+***
+*** Display the square of each element in sampleArray. (219961, 570025, …, 222784)
+***
+***/
+const kata14Heading = document.createElement("h2")
+kata14Heading.id = "h14"
+mainElement.append(kata14Heading)
+kata14Heading.append("Kata 14")
+
+const section14List = document.createElement("ul")
+kata14Heading.append(section14List)
+
+for (let counter14 = 0; counter14 < sampleArray.length; counter14++) {
+    let value = sampleArray[counter14] * sampleArray[counter14]
+    const listElement = document.createElement("li")
+    section14List.append(listElement)
+    listElement.append(value)
+}
+
+/** KATA 15 ⮕
+***
+*** Display the sum of all the numbers from 1 to 20.
+***
+***/
+
+
+/** KATA 16 ⮕
+***
+*** Display the sum of all the elements in sampleArray.
+***
+***/
+
+
+/** KATA 17 ⮕
+***
+*** Display the smallest element in sampleArray.
+***
+***/
+
+
+/** KATA 18 ⮕
+***
+*** Display the largest element in sampleArray.
+***
+***/
